@@ -45,9 +45,9 @@
 
 // eslint-disable-next-line
 import css from './index.pcss';
-import Ui from './ui';
-import Tunes from './tunes';
 import ToolboxIcon from './svg/toolbox.svg?raw';
+import Tunes from './tunes';
+import Ui from './ui';
 import Uploader from './uploader';
 
 /**
@@ -93,7 +93,7 @@ export default class ImageGallery {
   static get toolbox() {
     return {
       icon: ToolboxIcon,
-      title: 'Gallery',
+      title: 'Media',
     };
   }
 
@@ -307,7 +307,7 @@ export default class ImageGallery {
     this._data.caption = data.caption || '';
     this.ui.fillCaption(this._data.caption);
 
-    let style = data.style || '';
+    let style = data.style || 'gallery';
     this.styleToggled(style);
   }
 
@@ -366,11 +366,8 @@ export default class ImageGallery {
    * @returns {void}
    */
   styleToggled(tuneName) {
-    if (tuneName === 'fit') {
-      this._data.style = 'fit';
-    } else {
-      this._data.style = 'slider';
-    }
+    this._data.style = tuneName;
+    this.ui.applyTune(tuneName);
   }
 
   checkMaxElemCount() {

@@ -1,4 +1,4 @@
-import { IconPicture, IconTrash } from '@codexteam/icons'
+import { IconPicture, IconTrash } from '@codexteam/icons';
 
 /**
  * Class for working with UI:
@@ -355,6 +355,20 @@ export default class Ui {
         this.nodes.limitCounter.innerText = `${imageCount} / ${limitCounter}`;
       }
     }
+  }
+
+  /**
+   * Apply tune to the UI
+   *
+   * @param {string} tuneName
+   * @returns {void}
+   */
+  applyTune(tuneName) {
+    this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--gallery`, tuneName === 'gallery');
+    this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--slider`, tuneName === 'slider');
+
+    const captionText = tuneName === 'gallery' ? 'Gallery caption' : 'Slider caption';
+    this.nodes.caption.dataset.placeholder = this.api.i18n.t(captionText);
   }
 }
 

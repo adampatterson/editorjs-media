@@ -27,6 +27,23 @@
     display: none;
   }
 
+  &--slider &__items {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  &--slider &__image {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+  }
+
+  &--gallery &__items {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
   &__preloaders {
     display: flex;
     flex-grow: 1;

@@ -31,11 +31,13 @@ export default class Ui {
       caption: make('div', [this.CSS.input, this.CSS.caption], {
         contentEditable: !this.readOnly,
       }),
+      heading: make('div', this.CSS.heading),
     };
 
     /**
      * Create base structure
      *  <wrapper>
+     *    <heading />
      *    <container>
      *      <items-container>
      *        <image-container />
@@ -50,6 +52,8 @@ export default class Ui {
      *  </wrapper>
      */
     this.nodes.caption.dataset.placeholder = this.api.i18n.t('Gallery caption');
+
+    this.nodes.wrapper.appendChild(this.nodes.heading);
 
     if (!this.readOnly) {
       this.nodes.controls.appendChild(this.nodes.preloaderContainer);
@@ -105,6 +109,7 @@ export default class Ui {
       imageEl: 'image-gallery__image-picture',
       trashButton: 'image-gallery__image-trash',
       caption: 'image-gallery__caption',
+      heading: 'image-gallery__heading',
     };
   };
 
@@ -369,6 +374,9 @@ export default class Ui {
 
     const captionText = tuneName === 'gallery' ? 'Gallery caption' : 'Slider caption';
     this.nodes.caption.dataset.placeholder = this.api.i18n.t(captionText);
+
+    const headingText = tuneName === 'gallery' ? 'Gallery' : 'Slider';
+    this.nodes.heading.innerText = this.api.i18n.t(headingText);
   }
 }
 

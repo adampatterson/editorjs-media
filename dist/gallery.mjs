@@ -1157,6 +1157,17 @@ class U {
     this._data.files[r] !== void 0 && (this._data.files.splice(r, 1), this.checkMaxElemCount());
   }
   /**
+   * Update image file data
+   *
+   * @private
+   *
+   * @param {integer} id - image index
+   * @param {object} newData - new data to merge with existing file data
+   */
+  updateImage(r, l) {
+    this._data.files[r] !== void 0 && (this._data.files[r] = { ...this._data.files[r], ...l });
+  }
+  /**
    * Private methods
    * ̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿
    */

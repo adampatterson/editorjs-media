@@ -288,6 +288,20 @@ export default class ImageGallery {
   }
 
   /**
+   * Update image file data
+   *
+   * @private
+   *
+   * @param {integer} id - image index
+   * @param {object} newData - new data to merge with existing file data
+   */
+  updateImage(id, newData) {
+    if (this._data.files[id] !== undefined) {
+      this._data.files[id] = { ...this._data.files[id], ...newData };
+    }
+  }
+
+  /**
    * Private methods
    * ̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿
    */

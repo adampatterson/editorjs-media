@@ -5,16 +5,20 @@
 Loader based on [editor-js/image](https://github.com/editor-js/image).
 
 ### Preview
+
 ![Preview image](https://raw.githubusercontent.com/VolgaIgor/editorjs-gallery/master/assets/screenshot.png)
 
 ### Features
+
 * Multiple downloads
 * Sorting uploaded images (providing by [SortableJS](https://github.com/SortableJS/Sortable))
 * Limit the number of images
 * Two view selector (slider and fit)
 
 ## Installation
+
 ### Install via NPM
+
 Get the package
 
 ```shell
@@ -34,6 +38,7 @@ You can load a specific version of the package from jsDelivr CDN.
 Require this script on a page with Editor.js.
 
 ```html
+
 <script src="https://cdn.jsdelivr.net/npm/@kiberpro/editorjs-gallery"></script>
 ```
 
@@ -43,31 +48,35 @@ Require this script on a page with Editor.js.
 2. Add `dist/gallery.umd.js` file to your page.
 
 ### Enable sorting
+
 To enable sorting, include the SortableJS library and send it to the configuration:
+
 ```shell
 $ npm i sortablejs
 ```
+
 ```javascript
 import Sortable from 'sortablejs';
 ```
 
 ## Usage
+
 ```javascript
 var editor = EditorJS({
-  // ...
-  tools: {
     // ...
-    gallery: {
-      class: ImageGallery,
-      config: {
-        sortableJs: Sortable,
-        endpoints: {
-          byFile: 'http://localhost:8008/uploadFile',
-        }
-      },
-    },
-  }
-  // ...
+    tools: {
+        // ...
+        gallery: {
+            class: ImageGallery,
+            config: {
+                sortableJs: Sortable,
+                endpoints: {
+                    byFile: 'http://localhost:8008/uploadFile',
+                }
+            },
+        },
+    }
+    // ...
 });
 ```
 
@@ -75,40 +84,55 @@ var editor = EditorJS({
 
 Gallery block supports these configuration parameters:
 
-| Field | Type     | Description        |
-| ----- | -------- | ------------------ |
-| sortableJs | `object` | SortableJS library |
-| maxElementCount | `int` | (default: `undefined`) Maximum allowed number of images |
-| buttonContent | `string` | (default: `Select an Image`) Label for upload button |
-| uploader | `{{uploadByFile: function}}` | Optional custom uploading method. [See details](https://github.com/editor-js/image#providing-custom-uploading-methods). |
-| actions | `[{name: string, icon: string, title: string}]` | Array with custom switches |
+| Field                                                                             | Type                                            | Description                                                                                                             |
+|-----------------------------------------------------------------------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| sortableJs                                                                        | `object`                                        | SortableJS library                                                                                                      |
+| maxElementCount                                                                   | `int`                                           | (default: `undefined`) Maximum allowed number of images                                                                 |
+| buttonContent                                                                     | `string`                                        | (default: `Select an Image`) Label for upload button                                                                    |
+| uploader                                                                          | `{{uploadByFile: function}}`                    | Optional custom uploading method. [See details](https://github.com/editor-js/image#providing-custom-uploading-methods). |
+| actions                                                                           | `[{name: string, icon: string, title: string}]` | Array with custom switches                                                                                              |
 | [And others from the original ](https://github.com/editor-js/image#config-params) |
 
 Also you can add a localized string:
+
 ```javascript
 new Editorjs({
-  // ...
-  tools: {
-    gallery: ImageGallery
-  },
-  i18n: {
+    // ...
     tools: {
-      gallery: {
-        'Select an Image': 'Выберите изображение',
-        'Delete': 'Удалить',
-        'Gallery caption': 'Подпись'
-      }
-    }
-  },
+        gallery: ImageGallery
+    },
+    i18n: {
+        tools: {
+            gallery: {
+                'Select an Image': 'Выберите изображение',
+                'Delete': 'Удалить',
+                'Gallery caption': 'Подпись'
+            }
+        }
+    },
 })
 ```
 
 ## Output data
 
-This Tool returns `data` with following format
+This Tool returns `data` with the following format
 
-| Field          | Type       | Description                      |
-| -------------- | ---------  | -------------------------------- |
-| files          | `object[]` | Uploaded file datas. Any data got from backend uploader. Always contain the `url` property                  |
-| source         | `string`   | image's source                   |
-| style          | `string`   | (`fit` of `slider`) gallery view |
+| Field  | Type       | Description                                                                                |
+|--------|------------|--------------------------------------------------------------------------------------------|
+| files  | `object[]` | Uploaded file datas. Any data got from backend uploader. Always contain the `url` property |
+| source | `string`   | image's source                                                                             |
+| style  | `string`   | (`fit` of `slider`) gallery view                                                           |
+
+## Local Development
+
+#### Link the package to your project for local development:
+
+```shell
+ln -s ~/path/to/editorjs-media/ ~/path/to/project/node_modules/@adampatterson/editorjs-media
+```
+
+#### Building the package:
+
+```shell
+npm run build --emptyOutDir && npm --prefix ~/path/to/project run build
+```

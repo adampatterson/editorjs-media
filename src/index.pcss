@@ -129,6 +129,24 @@
         background-color: rgba(0, 0, 0, .5);
       }
     }
+
+    &-edit {
+      position: absolute;
+      top: 3px;
+      right: 40px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 18px;
+      background-color: rgba(0, 0, 0, .25);
+      line-height: 1;
+      padding: 6px 8px;
+      border-radius: 3px;
+      transition: background-color .1s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, .5);
+      }
+    }
   }
 
   &__counter {
@@ -216,6 +234,61 @@
     font-weight: 600;
     font-size: 1.2em;
     margin-bottom: 10px;
+  }
+
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__modal-title {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  &__modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+      font-size: 0.9em;
+      color: #707684;
+    }
+
+    input, textarea {
+      padding: 8px;
+      border: 1px solid #e8e8eb;
+      border-radius: 3px;
+      font-size: 1em;
+    }
+  }
+
+  &__modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
   }
 }
 

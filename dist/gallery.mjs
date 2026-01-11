@@ -1,5 +1,6 @@
-(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode('.image-gallery{--bg-color: #cdd1e0;--front-color: #388ae5;--border-color: #e8e8eb}.image-gallery__container{background:black;margin-bottom:10px;padding:5px}.image-gallery__controls{display:flex;gap:10px;padding:8px 2px 3px}.image-gallery__items{display:grid;gap:10px;grid-template-columns:1fr 1fr 1fr;padding:10px;background-color:#222}.image-gallery__items:empty{display:none}.image-gallery--slider .image-gallery__items{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.image-gallery--slider .image-gallery__image{flex:0 0 100%;scroll-snap-align:center}.image-gallery--gallery .image-gallery__items{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}.image-gallery__preloaders{display:flex;flex-grow:1;flex-wrap:nowrap;padding:5px;gap:8px;overflow:hidden}.image-gallery__preloader{min-width:30px;height:30px;border-radius:50%;background-size:cover;position:relative;background-color:var(--bg-color);background-position:center center}.image-gallery__preloader:after{content:"";position:absolute;z-index:3;width:30px;height:30px;border-radius:50%;border:2px solid var(--bg-color);border-top-color:var(--front-color);left:50%;top:50%;margin-top:-15px;margin-left:-15px;animation:image-preloader-spin 2s infinite linear;box-sizing:border-box}.sortable .image-gallery__image{cursor:move}.image-gallery__image{position:relative;overflow:hidden;aspect-ratio:16 / 9;-webkit-user-select:none;user-select:none;background-color:#000;border-radius:3px;padding:5px}.image-gallery__image.sortable-ghost{opacity:.75}.image-gallery__image--empty,.image-gallery__image--loading{display:none}.image-gallery__image-picture{border-radius:3px;max-width:100%;height:100%;display:block;margin:auto;object-fit:cover;pointer-events:none}.image-gallery__image-trash{position:absolute;top:3px;right:3px;cursor:pointer;color:#fff;font-size:18px;background-color:#00000040;line-height:1;padding:6px 8px;border-radius:3px;transition:background-color .1s}.image-gallery__image-trash:hover{background-color:#00000080}.image-gallery__counter{display:flex;align-items:center;color:gray;font-size:14px;margin-right:6px}.image-gallery__caption[contentEditable=true][data-placeholder]:before{position:absolute!important;content:attr(data-placeholder);color:#707684;font-weight:400;display:none}.image-gallery__caption[contentEditable=true][data-placeholder]:empty:before{display:block}.image-gallery__caption[contentEditable=true][data-placeholder]:empty:focus:before{display:none}.image-gallery__caption{margin-bottom:10px}.image-gallery .cdx-button{height:40px;display:flex;align-items:center;justify-content:center;padding:12px;gap:5px;white-space:nowrap}.image-gallery__tune-wrapper{display:flex;gap:6px;margin:6px 0}.image-gallery__tune-wrapper:first-child{margin-top:0}.image-gallery__tune-wrapper:last-child{margin-bottom:0}.image-gallery__tune{flex-grow:1;padding:6px;color:var(--color-text-primary);display:flex;align-items:center;justify-content:center}.image-gallery__tune.active{background:var(--color-background-icon-active);color:var(--color-text-icon-active);border-color:var(--color-text-icon-active)}.image-gallery__tune svg{width:24px;height:24px}.image-gallery__heading{font-weight:600;font-size:1.2em;margin-bottom:10px}@keyframes image-preloader-spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}')),document.head.appendChild(e)}}catch(a){console.error("vite-plugin-css-injected-by-js",a)}})();
-const L = '<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="20" viewBox="0 -960 960 960" width="20"><path d="M360-384h384L618-552l-90 120-66-88-102 136Zm-48 144q-29.7 0-50.85-21.15Q240-282.3 240-312v-480q0-29.7 21.15-50.85Q282.3-864 312-864h480q29.7 0 50.85 21.15Q864-821.7 864-792v480q0 29.7-21.15 50.85Q821.7-240 792-240H312Zm0-72h480v-480H312v480ZM168-96q-29.7 0-50.85-21.15Q96-138.3 96-168v-552h72v552h552v72H168Zm144-696v480-480Z"/></svg>', I = '<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="M363.077-406.154h373.844L612.769-569.23l-95.078 121.539-62.769-77.693-91.845 119.23Zm-40.769 146.153q-30.308 0-51.307-21-21-21-21-51.308v-455.382q0-30.308 21-51.308 20.999-21 51.307-21h455.383q30.307 0 51.307 21 21 21 21 51.308v455.382q0 30.308-21 51.308t-51.307 21H322.308Zm0-59.999h455.383q4.615 0 8.462-3.846 3.846-3.847 3.846-8.463v-455.382q0-4.616-3.846-8.463-3.847-3.846-8.462-3.846H322.308q-4.616 0-8.462 3.846-3.847 3.847-3.847 8.463v455.382q0 4.616 3.847 8.463 3.846 3.846 8.462 3.846ZM182.309-120.003q-30.307 0-51.307-21-21-21-21-51.307v-515.381h59.999v515.381q0 4.616 3.846 8.462 3.847 3.847 8.462 3.847h515.382v59.998H182.309ZM309.999-800v480-480Z"/></svg>', P = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><rect width="14" height="14" x="5" y="5" stroke="currentColor" stroke-width="2" rx="4"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.13968 15.32L8.69058 11.5661C9.02934 11.2036 9.48873 11 9.96774 11C10.4467 11 10.9061 11.2036 11.2449 11.5661L15.3871 16M13.5806 14.0664L15.0132 12.533C15.3519 12.1705 15.8113 11.9668 16.2903 11.9668C16.7693 11.9668 17.2287 12.1705 17.5675 12.533L18.841 13.9634"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.7778 9.33331H13.7867"/></svg>', D = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.1328 7.7234C18.423 7.7634 18.7115 7.80571 19 7.85109M18.1328 7.7234L17.2267 17.4023C17.1897 17.8371 16.973 18.2432 16.62 18.5394C16.267 18.8356 15.8037 19.0001 15.3227 19H8.67733C8.19632 19.0001 7.73299 18.8356 7.37998 18.5394C7.02698 18.2432 6.81032 17.8371 6.77333 17.4023L5.86715 7.7234M18.1328 7.7234C17.1536 7.58919 16.1693 7.48733 15.1818 7.41803M5.86715 7.7234C5.57697 7.76263 5.28848 7.80494 5 7.85032M5.86715 7.7234C6.84642 7.58919 7.83074 7.48733 8.81818 7.41803M15.1818 7.41803C13.0638 7.26963 10.9362 7.26963 8.81818 7.41803M15.1818 7.41803C15.1818 5.30368 13.7266 4.34834 12 4.34834C10.2734 4.34834 8.81818 5.43945 8.81818 7.41803"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 15.5L10 11"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 11L13.5 15.5"/></svg>';
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode('.image-gallery{--bg-color: #cdd1e0;--front-color: #388ae5;--border-color: #e8e8eb}.image-gallery__container{background:black;margin-bottom:10px;padding:5px}.image-gallery__controls{display:flex;gap:10px;padding:8px 2px 3px}.image-gallery__items{display:grid;gap:10px;grid-template-columns:1fr 1fr 1fr;padding:10px;background-color:#222}.image-gallery__items:empty{display:none}.image-gallery--slider .image-gallery__items{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.image-gallery--slider .image-gallery__image{flex:0 0 100%;scroll-snap-align:center}.image-gallery--gallery .image-gallery__items{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}.image-gallery__preloaders{display:flex;flex-grow:1;flex-wrap:nowrap;padding:5px;gap:8px;overflow:hidden}.image-gallery__preloader{min-width:30px;height:30px;border-radius:50%;background-size:cover;position:relative;background-color:var(--bg-color);background-position:center center}.image-gallery__preloader:after{content:"";position:absolute;z-index:3;width:30px;height:30px;border-radius:50%;border:2px solid var(--bg-color);border-top-color:var(--front-color);left:50%;top:50%;margin-top:-15px;margin-left:-15px;animation:image-preloader-spin 2s infinite linear;box-sizing:border-box}.sortable .image-gallery__image{cursor:move}.image-gallery__image{position:relative;overflow:hidden;aspect-ratio:16 / 9;-webkit-user-select:none;user-select:none;background-color:#000;border-radius:3px;padding:5px}.image-gallery__image.sortable-ghost{opacity:.75}.image-gallery__image--empty,.image-gallery__image--loading{display:none}.image-gallery__image-picture{border-radius:3px;max-width:100%;height:100%;display:block;margin:auto;object-fit:cover;pointer-events:none}.image-gallery__image-trash{position:absolute;top:3px;right:3px;cursor:pointer;color:#fff;font-size:18px;background-color:#00000040;line-height:1;padding:6px 8px;border-radius:3px;transition:background-color .1s}.image-gallery__image-trash:hover{background-color:#00000080}.image-gallery__image-edit{position:absolute;top:3px;right:40px;cursor:pointer;color:#fff;font-size:18px;background-color:#00000040;line-height:1;padding:6px 8px;border-radius:3px;transition:background-color .1s}.image-gallery__image-edit:hover{background-color:#00000080}.image-gallery__counter{display:flex;align-items:center;color:gray;font-size:14px;margin-right:6px}.image-gallery__caption[contentEditable=true][data-placeholder]:before{position:absolute!important;content:attr(data-placeholder);color:#707684;font-weight:400;display:none}.image-gallery__caption[contentEditable=true][data-placeholder]:empty:before{display:block}.image-gallery__caption[contentEditable=true][data-placeholder]:empty:focus:before{display:none}.image-gallery__caption{margin-bottom:10px}.image-gallery .cdx-button{height:40px;display:flex;align-items:center;justify-content:center;padding:12px;gap:5px;white-space:nowrap}.image-gallery__tune-wrapper{display:flex;gap:6px;margin:6px 0}.image-gallery__tune-wrapper:first-child{margin-top:0}.image-gallery__tune-wrapper:last-child{margin-bottom:0}.image-gallery__tune{flex-grow:1;padding:6px;color:var(--color-text-primary);display:flex;align-items:center;justify-content:center}.image-gallery__tune.active{background:var(--color-background-icon-active);color:var(--color-text-icon-active);border-color:var(--color-text-icon-active)}.image-gallery__tune svg{width:24px;height:24px}.image-gallery__heading{font-weight:600;font-size:1.2em;margin-bottom:10px}.image-gallery__modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:1000;display:flex;align-items:center;justify-content:center}.image-gallery__modal-content{background:white;padding:20px;border-radius:5px;width:400px;max-width:90%;display:flex;flex-direction:column;gap:10px}.image-gallery__modal-title{font-weight:600;font-size:1.2em;margin-bottom:10px}.image-gallery__modal-field{display:flex;flex-direction:column;gap:5px}.image-gallery__modal-field label{font-size:.9em;color:#707684}.image-gallery__modal-field input,.image-gallery__modal-field textarea{padding:8px;border:1px solid #e8e8eb;border-radius:3px;font-size:1em}.image-gallery__modal-footer{display:flex;justify-content:flex-end;gap:10px;margin-top:10px}@keyframes image-preloader-spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}')),document.head.appendChild(e)}}catch(a){console.error("vite-plugin-css-injected-by-js",a)}})();
+const O = '<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="20" viewBox="0 -960 960 960" width="20"><path d="M360-384h384L618-552l-90 120-66-88-102 136Zm-48 144q-29.7 0-50.85-21.15Q240-282.3 240-312v-480q0-29.7 21.15-50.85Q282.3-864 312-864h480q29.7 0 50.85 21.15Q864-821.7 864-792v480q0 29.7-21.15 50.85Q821.7-240 792-240H312Zm0-72h480v-480H312v480ZM168-96q-29.7 0-50.85-21.15Q96-138.3 96-168v-552h72v552h552v72H168Zm144-696v480-480Z"/></svg>', I = '<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="M363.077-406.154h373.844L612.769-569.23l-95.078 121.539-62.769-77.693-91.845 119.23Zm-40.769 146.153q-30.308 0-51.307-21-21-21-21-51.308v-455.382q0-30.308 21-51.308 20.999-21 51.307-21h455.383q30.307 0 51.307 21 21 21 21 51.308v455.382q0 30.308-21 51.308t-51.307 21H322.308Zm0-59.999h455.383q4.615 0 8.462-3.846 3.846-3.847 3.846-8.463v-455.382q0-4.616-3.846-8.463-3.847-3.846-8.462-3.846H322.308q-4.616 0-8.462 3.846-3.847 3.847-3.847 8.463v455.382q0 4.616 3.847 8.463 3.846 3.846 8.462 3.846ZM182.309-120.003q-30.307 0-51.307-21-21-21-21-51.307v-515.381h59.999v515.381q0 4.616 3.846 8.462 3.847 3.847 8.462 3.847h515.382v59.998H182.309ZM309.999-800v480-480Z"/></svg>', P = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><rect width="14" height="14" x="5" y="5" stroke="currentColor" stroke-width="2" rx="4"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.13968 15.32L8.69058 11.5661C9.02934 11.2036 9.48873 11 9.96774 11C10.4467 11 10.9061 11.2036 11.2449 11.5661L15.3871 16M13.5806 14.0664L15.0132 12.533C15.3519 12.1705 15.8113 11.9668 16.2903 11.9668C16.7693 11.9668 17.2287 12.1705 17.5675 12.533L18.841 13.9634"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.7778 9.33331H13.7867"/></svg>', D = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.1328 7.7234C18.423 7.7634 18.7115 7.80571 19 7.85109M18.1328 7.7234L17.2267 17.4023C17.1897 17.8371 16.973 18.2432 16.62 18.5394C16.267 18.8356 15.8037 19.0001 15.3227 19H8.67733C8.19632 19.0001 7.73299 18.8356 7.37998 18.5394C7.02698 18.2432 6.81032 17.8371 6.77333 17.4023L5.86715 7.7234M18.1328 7.7234C17.1536 7.58919 16.1693 7.48733 15.1818 7.41803M5.86715 7.7234C5.57697 7.76263 5.28848 7.80494 5 7.85032M5.86715 7.7234C6.84642 7.58919 7.83074 7.48733 8.81818 7.41803M15.1818 7.41803C13.0638 7.26963 10.9362 7.26963 8.81818 7.41803M15.1818 7.41803C15.1818 5.30368 13.7266 4.34834 12 4.34834C10.2734 4.34834 8.81818 5.43945 8.81818 7.41803"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 15.5L10 11"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 11L13.5 15.5"/></svg>', q = `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
+`;
 class k {
   /**
    * @param {object} ui - image tool Ui module
@@ -8,8 +9,8 @@ class k {
    * @param {Function} ui.onSelectFile - callback for clicks on Select file button
    * @param {boolean} ui.readOnly - read-only mode flag
    */
-  constructor({ api: o, config: a, onSelectFile: d, onDeleteFile: r, onMoveFile: i, readOnly: t }) {
-    this.api = o, this.config = a, this.onSelectFile = d, this.onDeleteFile = r, this.onMoveFile = i, this.readOnly = t, this.nodes = {
+  constructor({ api: r, config: l, onSelectFile: d, onDeleteFile: o, onMoveFile: i, onUpdateFile: t, readOnly: u }) {
+    this.api = r, this.config = l, this.onSelectFile = d, this.onDeleteFile = o, this.onMoveFile = i, this.onUpdateFile = t, this.readOnly = u, this.nodes = {
       wrapper: C("div", [this.CSS.baseClass, this.CSS.wrapper]),
       fileButton: this.createFileButton(),
       container: C("div", this.CSS.container),
@@ -20,9 +21,9 @@ class k {
         contentEditable: !this.readOnly
       }),
       heading: C("div", this.CSS.heading)
-    }, this.nodes.caption.dataset.placeholder = this.api.i18n.t("Gallery caption"), this.nodes.wrapper.appendChild(this.nodes.heading), this.readOnly || (this.nodes.controls.appendChild(this.nodes.preloaderContainer), this.config.maxElementCount && (this.nodes.limitCounter = C("div", this.CSS.limitCounter), this.nodes.controls.appendChild(this.nodes.limitCounter)), this.nodes.controls.appendChild(this.nodes.fileButton)), this.nodes.container.appendChild(this.nodes.itemsContainer), this.readOnly || this.nodes.container.appendChild(this.nodes.controls), this.nodes.wrapper.appendChild(this.nodes.container), this.readOnly || this.nodes.wrapper.appendChild(this.nodes.caption), ["dragenter", "dragover", "dragleave", "drop"].forEach((u) => {
-      this.nodes.itemsContainer.addEventListener(u, function(g) {
-        g.preventDefault(), g.stopPropagation();
+    }, this.nodes.caption.dataset.placeholder = this.api.i18n.t("Gallery caption"), this.nodes.wrapper.appendChild(this.nodes.heading), this.readOnly || (this.nodes.controls.appendChild(this.nodes.preloaderContainer), this.config.maxElementCount && (this.nodes.limitCounter = C("div", this.CSS.limitCounter), this.nodes.controls.appendChild(this.nodes.limitCounter)), this.nodes.controls.appendChild(this.nodes.fileButton)), this.nodes.container.appendChild(this.nodes.itemsContainer), this.readOnly || this.nodes.container.appendChild(this.nodes.controls), this.nodes.wrapper.appendChild(this.nodes.container), this.readOnly || this.nodes.wrapper.appendChild(this.nodes.caption), ["dragenter", "dragover", "dragleave", "drop"].forEach((g) => {
+      this.nodes.itemsContainer.addEventListener(g, function(a) {
+        a.preventDefault(), a.stopPropagation();
       }, !1);
     });
   }
@@ -50,8 +51,15 @@ class k {
       imagePreloader: "image-gallery__preloader",
       imageEl: "image-gallery__image-picture",
       trashButton: "image-gallery__image-trash",
+      editButton: "image-gallery__image-edit",
       caption: "image-gallery__caption",
-      heading: "image-gallery__heading"
+      heading: "image-gallery__heading",
+      modal: "image-gallery__modal",
+      modalContent: "image-gallery__modal-content",
+      modalTitle: "image-gallery__modal-title",
+      modalField: "image-gallery__modal-field",
+      modalFooter: "image-gallery__modal-footer",
+      buttonPrimary: "cdx-button--primary"
     };
   }
   /**
@@ -75,7 +83,7 @@ class k {
    * @param {ImageGalleryData} toolData - saved tool data
    * @returns {Element}
    */
-  render(o) {
+  render(r) {
     return this.nodes.wrapper;
   }
   onRendered() {
@@ -85,8 +93,8 @@ class k {
       onStart: () => {
         this.nodes.itemsContainer.classList.add(`${this.CSS.itemsContainer}--drag`);
       },
-      onEnd: (o) => {
-        this.nodes.itemsContainer.classList.remove(`${this.CSS.itemsContainer}--drag`), o.oldIndex !== o.newIndex && this.onMoveFile(o.oldIndex, o.newIndex);
+      onEnd: (r) => {
+        this.nodes.itemsContainer.classList.remove(`${this.CSS.itemsContainer}--drag`), r.oldIndex !== r.newIndex && this.onMoveFile(r.oldIndex, r.newIndex);
       }
     }), this.nodes.itemsContainer.classList.add("sortable"));
   }
@@ -96,10 +104,10 @@ class k {
    * @returns {Element}
    */
   createFileButton() {
-    const o = C("div", [this.CSS.button]);
-    return o.innerHTML = this.config.buttonContent || `${P} ${this.api.i18n.t("Select an Image")}`, o.addEventListener("click", () => {
+    const r = C("div", [this.CSS.button]);
+    return r.innerHTML = this.config.buttonContent || `${P} ${this.api.i18n.t("Select an Image")}`, r.addEventListener("click", () => {
       this.onSelectFile();
-    }), o;
+    }), r;
   }
   /**
    * Shows uploading button
@@ -117,16 +125,16 @@ class k {
   hideFileButton() {
     this.nodes.fileButton.style.display = "none";
   }
-  getPreloader(o) {
-    let a = C("div", this.CSS.imagePreloader);
-    this.nodes.preloaderContainer.append(a);
+  getPreloader(r) {
+    let l = C("div", this.CSS.imagePreloader);
+    this.nodes.preloaderContainer.append(l);
     const d = new FileReader();
-    return d.readAsDataURL(o), d.onload = (r) => {
-      a.style.backgroundImage = `url(${r.target.result})`;
-    }, a;
+    return d.readAsDataURL(r), d.onload = (o) => {
+      l.style.backgroundImage = `url(${o.target.result})`;
+    }, l;
   }
-  removePreloader(o) {
-    o.remove();
+  removePreloader(r) {
+    r.remove();
   }
   /**
    * Shows an image
@@ -134,30 +142,41 @@ class k {
    * @param {ImageGalleryDataFile} file - image file object
    * @returns {void}
    */
-  appendImage(o) {
-    let a = o.url;
-    const d = /\.mp4$/.test(a) ? "VIDEO" : "IMG", r = {
-      src: a
+  appendImage(r) {
+    let l = r.url;
+    const d = /\.mp4$/.test(l) ? "VIDEO" : "IMG", o = {
+      src: l
     };
     let i = "load";
-    d === "VIDEO" && (r.autoplay = !1, r.muted = !0, r.playsinline = !0, i = "loadeddata");
-    let t = C("div", [this.CSS.imageContainer]), u = C(d, this.CSS.imageEl, r);
+    d === "VIDEO" && (o.autoplay = !1, o.muted = !0, o.playsinline = !0, i = "loadeddata");
+    let t = C("div", [this.CSS.imageContainer]), u = C(d, this.CSS.imageEl, o);
     u.addEventListener(i, () => {
       this.toggleStatus(t, k.status.FILLED);
     }), t.appendChild(u);
     const g = this.api.i18n.t("Delete");
     if (!this.readOnly) {
-      let s = C("div", [this.CSS.trashButton], {
+      let a = C("div", [this.CSS.trashButton], {
         innerHTML: D,
         title: g
       });
-      this.api.tooltip.onHover(s, g, {
+      this.api.tooltip.onHover(a, g, {
         placement: "top"
-      }), s.addEventListener("click", () => {
+      }), a.addEventListener("click", () => {
         this.api.tooltip.hide();
-        let p = Array.prototype.slice.call(this.nodes.itemsContainer.children).indexOf(t);
-        p !== -1 && (this.nodes.itemsContainer.removeChild(t), this.onDeleteFile(p));
-      }), t.appendChild(s);
+        let f = Array.prototype.slice.call(this.nodes.itemsContainer.children).indexOf(t);
+        f !== -1 && (this.nodes.itemsContainer.removeChild(t), this.onDeleteFile(f));
+      }), t.appendChild(a);
+      const h = this.api.i18n.t("Edit");
+      let p = C("div", [this.CSS.editButton], {
+        innerHTML: q,
+        title: h
+      });
+      this.api.tooltip.onHover(p, h, {
+        placement: "top"
+      }), p.addEventListener("click", () => {
+        let f = Array.prototype.slice.call(this.nodes.itemsContainer.children).indexOf(t);
+        f !== -1 && this.showEditModal(r, f);
+      }), t.appendChild(p);
     }
     this.nodes.itemsContainer.append(t);
   }
@@ -167,8 +186,8 @@ class k {
    * @param {string} text - caption text
    * @returns {void}
    */
-  fillCaption(o) {
-    this.nodes.caption && (this.nodes.caption.innerHTML = o);
+  fillCaption(r) {
+    this.nodes.caption && (this.nodes.caption.innerHTML = r);
   }
   /**
    * Changes UI status
@@ -177,17 +196,17 @@ class k {
    * @param {string} status - see {@link Ui.status} constants
    * @returns {void}
    */
-  toggleStatus(o, a) {
+  toggleStatus(r, l) {
     for (const d in k.status)
-      Object.prototype.hasOwnProperty.call(k.status, d) && o.classList.toggle(`${this.CSS.imageContainer}--${k.status[d]}`, a === k.status[d]);
+      Object.prototype.hasOwnProperty.call(k.status, d) && r.classList.toggle(`${this.CSS.imageContainer}--${k.status[d]}`, l === k.status[d]);
   }
   /**
    * @param {int} imageCount
    * @param {int|null} limitCounter
    * @returns {void}
    */
-  updateLimitCounter(o, a) {
-    a && this.nodes.limitCounter && (o === 0 ? this.nodes.limitCounter.style.display = "none" : (this.nodes.limitCounter.style.display = null, this.nodes.limitCounter.innerText = `${o} / ${a}`));
+  updateLimitCounter(r, l) {
+    l && this.nodes.limitCounter && (r === 0 ? this.nodes.limitCounter.style.display = "none" : (this.nodes.limitCounter.style.display = null, this.nodes.limitCounter.innerText = `${r} / ${l}`));
   }
   /**
    * Apply tune to the UI
@@ -195,30 +214,62 @@ class k {
    * @param {string} tuneName
    * @returns {void}
    */
-  applyTune(o) {
-    this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--gallery`, o === "gallery"), this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--slider`, o === "slider");
-    const a = o === "gallery" ? "Gallery caption" : "Slider caption";
-    this.nodes.caption.dataset.placeholder = this.api.i18n.t(a);
-    const d = o === "gallery" ? "Gallery" : "Slider";
+  applyTune(r) {
+    this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--gallery`, r === "gallery"), this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--slider`, r === "slider");
+    const l = r === "gallery" ? "Gallery caption" : "Slider caption";
+    this.nodes.caption.dataset.placeholder = this.api.i18n.t(l);
+    const d = r === "gallery" ? "Gallery" : "Slider";
     this.nodes.heading.innerText = this.api.i18n.t(d);
   }
+  /**
+   * Shows edit modal
+   *
+   * @param {ImageGalleryDataFile} file - file data
+   * @param {number} index - file index
+   */
+  showEditModal(r, l) {
+    const d = C("div", this.CSS.modal), o = C("div", this.CSS.modalContent), i = C("div", this.CSS.modalTitle, {
+      innerText: this.api.i18n.t("Edit Image Metadata")
+    }), t = (w, e, n = "input") => {
+      const s = C("div", this.CSS.modalField), c = C("label", null, { innerText: this.api.i18n.t(w) }), y = C(n === "textarea" ? "textarea" : "input", null, {
+        value: r[e] || "",
+        placeholder: this.api.i18n.t(w)
+      });
+      return s.appendChild(c), s.appendChild(y), { field: s, input: y };
+    }, u = t("Title", "title"), g = t("Alt Text", "alt"), a = t("Description", "description", "textarea"), h = t("Author", "author"), p = C("div", this.CSS.modalFooter), v = C("button", [this.CSS.button, this.CSS.buttonPrimary], {
+      innerText: this.api.i18n.t("Save")
+    }), f = C("button", [this.CSS.button], {
+      innerText: this.api.i18n.t("Cancel")
+    });
+    v.addEventListener("click", () => {
+      const w = {
+        title: u.input.value,
+        alt: g.input.value,
+        description: a.input.value,
+        author: h.input.value
+      };
+      this.onUpdateFile(l, w), Object.assign(r, w), d.remove();
+    }), f.addEventListener("click", () => {
+      d.remove();
+    }), p.appendChild(f), p.appendChild(v), o.appendChild(i), o.appendChild(u.field), o.appendChild(g.field), o.appendChild(a.field), o.appendChild(h.field), o.appendChild(p), d.appendChild(o), document.body.appendChild(d);
+  }
 }
-const C = function(o, a = null, d = {}) {
-  const r = document.createElement(o);
-  Array.isArray(a) ? r.classList.add(...a) : a && r.classList.add(a);
+const C = function(r, l = null, d = {}) {
+  const o = document.createElement(r);
+  Array.isArray(l) ? o.classList.add(...l) : l && o.classList.add(l);
   for (const i in d)
-    r[i] = d[i];
-  return r;
+    o[i] = d[i];
+  return o;
 };
-class O {
+class L {
   /**
    * @param {object} tune - image tool Tunes managers
    * @param {object} tune.api - Editor API
    * @param {object} tune.actions - list of user defined tunes
    * @param {Function} tune.onChange - tune toggling callback
    */
-  constructor({ api: o, actions: a, onChange: d }) {
-    this.api = o, this.actions = a, this.onChange = d, this.buttons = [];
+  constructor({ api: r, actions: l, onChange: d }) {
+    this.api = r, this.actions = l, this.onChange = d, this.buttons = [];
   }
   /**
    * Available Image tunes
@@ -229,7 +280,7 @@ class O {
     return console.log("TUNE"), [
       {
         name: "gallery",
-        icon: L,
+        icon: O,
         title: "Gallery"
       },
       {
@@ -258,19 +309,19 @@ class O {
    * @param {ImageGalleryData} toolData - generate Elements of tunes
    * @returns {Element}
    */
-  render(o) {
-    const a = C("div", this.CSS.wrapper), d = this.actions ?? O.tunes;
-    return this.buttons = [], d.forEach((r) => {
-      const i = this.api.i18n.t(r.title), t = C("div", [this.CSS.buttonBase, this.CSS.button], {
-        innerHTML: r.icon,
+  render(r) {
+    const l = C("div", this.CSS.wrapper), d = this.actions ?? L.tunes;
+    return this.buttons = [], d.forEach((o) => {
+      const i = this.api.i18n.t(o.title), t = C("div", [this.CSS.buttonBase, this.CSS.button], {
+        innerHTML: o.icon,
         title: i
       });
       t.addEventListener("click", () => {
-        this.tuneClicked(r.name, r.action);
-      }), t.dataset.tune = r.name, t.classList.toggle(this.CSS.buttonActive, o.style === r.name), this.buttons.push(t), this.api.tooltip.onHover(t, i, {
+        this.tuneClicked(o.name, o.action);
+      }), t.dataset.tune = o.name, t.classList.toggle(this.CSS.buttonActive, r.style === o.name), this.buttons.push(t), this.api.tooltip.onHover(t, i, {
         placement: "top"
-      }), a.appendChild(t);
-    }), a;
+      }), l.appendChild(t);
+    }), l;
   }
   /**
    * Clicks to one of the tunes
@@ -278,193 +329,193 @@ class O {
    * @param {string} tuneName - clicked tune name
    * @param {Function} customFunction - function to execute on click
    */
-  tuneClicked(o, a) {
-    if (typeof a == "function" && !a(o))
+  tuneClicked(r, l) {
+    if (typeof l == "function" && !l(r))
       return !1;
     this.buttons.forEach((d) => {
-      d.classList.toggle(this.CSS.buttonActive, d.dataset.tune === o);
-    }), this.onChange(o);
+      d.classList.toggle(this.CSS.buttonActive, d.dataset.tune === r);
+    }), this.onChange(r);
   }
 }
 function R(S) {
   return S && S.__esModule && Object.prototype.hasOwnProperty.call(S, "default") ? S.default : S;
 }
 var j = { exports: {} };
-(function(S, o) {
-  (function(a, d) {
+(function(S, r) {
+  (function(l, d) {
     S.exports = d();
   })(window, function() {
-    return function(a) {
+    return function(l) {
       var d = {};
-      function r(i) {
+      function o(i) {
         if (d[i])
           return d[i].exports;
         var t = d[i] = { i, l: !1, exports: {} };
-        return a[i].call(t.exports, t, t.exports, r), t.l = !0, t.exports;
+        return l[i].call(t.exports, t, t.exports, o), t.l = !0, t.exports;
       }
-      return r.m = a, r.c = d, r.d = function(i, t, u) {
-        r.o(i, t) || Object.defineProperty(i, t, { enumerable: !0, get: u });
-      }, r.r = function(i) {
+      return o.m = l, o.c = d, o.d = function(i, t, u) {
+        o.o(i, t) || Object.defineProperty(i, t, { enumerable: !0, get: u });
+      }, o.r = function(i) {
         typeof Symbol < "u" && Symbol.toStringTag && Object.defineProperty(i, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(i, "__esModule", { value: !0 });
-      }, r.t = function(i, t) {
-        if (1 & t && (i = r(i)), 8 & t || 4 & t && typeof i == "object" && i && i.__esModule)
+      }, o.t = function(i, t) {
+        if (1 & t && (i = o(i)), 8 & t || 4 & t && typeof i == "object" && i && i.__esModule)
           return i;
         var u = /* @__PURE__ */ Object.create(null);
-        if (r.r(u), Object.defineProperty(u, "default", { enumerable: !0, value: i }), 2 & t && typeof i != "string")
+        if (o.r(u), Object.defineProperty(u, "default", { enumerable: !0, value: i }), 2 & t && typeof i != "string")
           for (var g in i)
-            r.d(u, g, (function(s) {
-              return i[s];
+            o.d(u, g, (function(a) {
+              return i[a];
             }).bind(null, g));
         return u;
-      }, r.n = function(i) {
+      }, o.n = function(i) {
         var t = i && i.__esModule ? function() {
           return i.default;
         } : function() {
           return i;
         };
-        return r.d(t, "a", t), t;
-      }, r.o = function(i, t) {
+        return o.d(t, "a", t), t;
+      }, o.o = function(i, t) {
         return Object.prototype.hasOwnProperty.call(i, t);
-      }, r.p = "", r(r.s = 3);
-    }([function(a, d) {
-      var r;
-      r = function() {
+      }, o.p = "", o(o.s = 3);
+    }([function(l, d) {
+      var o;
+      o = function() {
         return this;
       }();
       try {
-        r = r || new Function("return this")();
+        o = o || new Function("return this")();
       } catch {
-        typeof window == "object" && (r = window);
+        typeof window == "object" && (o = window);
       }
-      a.exports = r;
-    }, function(a, d, r) {
+      l.exports = o;
+    }, function(l, d, o) {
       (function(i) {
-        var t = r(2), u = setTimeout;
+        var t = o(2), u = setTimeout;
         function g() {
         }
-        function s(n) {
-          if (!(this instanceof s))
+        function a(n) {
+          if (!(this instanceof a))
             throw new TypeError("Promises must be constructed via new");
           if (typeof n != "function")
             throw new TypeError("not a function");
           this._state = 0, this._handled = !1, this._value = void 0, this._deferreds = [], e(n, this);
         }
-        function h(n, c) {
+        function h(n, s) {
           for (; n._state === 3; )
             n = n._value;
-          n._state !== 0 ? (n._handled = !0, s._immediateFn(function() {
-            var l = n._state === 1 ? c.onFulfilled : c.onRejected;
-            if (l !== null) {
+          n._state !== 0 ? (n._handled = !0, a._immediateFn(function() {
+            var c = n._state === 1 ? s.onFulfilled : s.onRejected;
+            if (c !== null) {
               var y;
               try {
-                y = l(n._value);
-              } catch (m) {
-                return void v(c.promise, m);
+                y = c(n._value);
+              } catch (b) {
+                return void v(s.promise, b);
               }
-              p(c.promise, y);
+              p(s.promise, y);
             } else
-              (n._state === 1 ? p : v)(c.promise, n._value);
-          })) : n._deferreds.push(c);
+              (n._state === 1 ? p : v)(s.promise, n._value);
+          })) : n._deferreds.push(s);
         }
-        function p(n, c) {
+        function p(n, s) {
           try {
-            if (c === n)
+            if (s === n)
               throw new TypeError("A promise cannot be resolved with itself.");
-            if (c && (typeof c == "object" || typeof c == "function")) {
-              var l = c.then;
-              if (c instanceof s)
-                return n._state = 3, n._value = c, void b(n);
-              if (typeof l == "function")
-                return void e((y = l, m = c, function() {
-                  y.apply(m, arguments);
+            if (s && (typeof s == "object" || typeof s == "function")) {
+              var c = s.then;
+              if (s instanceof a)
+                return n._state = 3, n._value = s, void f(n);
+              if (typeof c == "function")
+                return void e((y = c, b = s, function() {
+                  y.apply(b, arguments);
                 }), n);
             }
-            n._state = 1, n._value = c, b(n);
-          } catch (f) {
-            v(n, f);
+            n._state = 1, n._value = s, f(n);
+          } catch (m) {
+            v(n, m);
           }
-          var y, m;
+          var y, b;
         }
-        function v(n, c) {
-          n._state = 2, n._value = c, b(n);
+        function v(n, s) {
+          n._state = 2, n._value = s, f(n);
         }
-        function b(n) {
-          n._state === 2 && n._deferreds.length === 0 && s._immediateFn(function() {
-            n._handled || s._unhandledRejectionFn(n._value);
+        function f(n) {
+          n._state === 2 && n._deferreds.length === 0 && a._immediateFn(function() {
+            n._handled || a._unhandledRejectionFn(n._value);
           });
-          for (var c = 0, l = n._deferreds.length; c < l; c++)
-            h(n, n._deferreds[c]);
+          for (var s = 0, c = n._deferreds.length; s < c; s++)
+            h(n, n._deferreds[s]);
           n._deferreds = null;
         }
-        function w(n, c, l) {
-          this.onFulfilled = typeof n == "function" ? n : null, this.onRejected = typeof c == "function" ? c : null, this.promise = l;
+        function w(n, s, c) {
+          this.onFulfilled = typeof n == "function" ? n : null, this.onRejected = typeof s == "function" ? s : null, this.promise = c;
         }
-        function e(n, c) {
-          var l = !1;
+        function e(n, s) {
+          var c = !1;
           try {
             n(function(y) {
-              l || (l = !0, p(c, y));
+              c || (c = !0, p(s, y));
             }, function(y) {
-              l || (l = !0, v(c, y));
+              c || (c = !0, v(s, y));
             });
           } catch (y) {
-            if (l)
+            if (c)
               return;
-            l = !0, v(c, y);
+            c = !0, v(s, y);
           }
         }
-        s.prototype.catch = function(n) {
+        a.prototype.catch = function(n) {
           return this.then(null, n);
-        }, s.prototype.then = function(n, c) {
-          var l = new this.constructor(g);
-          return h(this, new w(n, c, l)), l;
-        }, s.prototype.finally = t.a, s.all = function(n) {
-          return new s(function(c, l) {
+        }, a.prototype.then = function(n, s) {
+          var c = new this.constructor(g);
+          return h(this, new w(n, s, c)), c;
+        }, a.prototype.finally = t.a, a.all = function(n) {
+          return new a(function(s, c) {
             if (!n || n.length === void 0)
               throw new TypeError("Promise.all accepts an array");
             var y = Array.prototype.slice.call(n);
             if (y.length === 0)
-              return c([]);
-            var m = y.length;
-            function f(E, x) {
+              return s([]);
+            var b = y.length;
+            function m(E, x) {
               try {
                 if (x && (typeof x == "object" || typeof x == "function")) {
                   var T = x.then;
                   if (typeof T == "function")
                     return void T.call(x, function(F) {
-                      f(E, F);
-                    }, l);
+                      m(E, F);
+                    }, c);
                 }
-                y[E] = x, --m == 0 && c(y);
+                y[E] = x, --b == 0 && s(y);
               } catch (F) {
-                l(F);
+                c(F);
               }
             }
             for (var _ = 0; _ < y.length; _++)
-              f(_, y[_]);
+              m(_, y[_]);
           });
-        }, s.resolve = function(n) {
-          return n && typeof n == "object" && n.constructor === s ? n : new s(function(c) {
+        }, a.resolve = function(n) {
+          return n && typeof n == "object" && n.constructor === a ? n : new a(function(s) {
+            s(n);
+          });
+        }, a.reject = function(n) {
+          return new a(function(s, c) {
             c(n);
           });
-        }, s.reject = function(n) {
-          return new s(function(c, l) {
-            l(n);
+        }, a.race = function(n) {
+          return new a(function(s, c) {
+            for (var y = 0, b = n.length; y < b; y++)
+              n[y].then(s, c);
           });
-        }, s.race = function(n) {
-          return new s(function(c, l) {
-            for (var y = 0, m = n.length; y < m; y++)
-              n[y].then(c, l);
-          });
-        }, s._immediateFn = typeof i == "function" && function(n) {
+        }, a._immediateFn = typeof i == "function" && function(n) {
           i(n);
         } || function(n) {
           u(n, 0);
-        }, s._unhandledRejectionFn = function(n) {
+        }, a._unhandledRejectionFn = function(n) {
           typeof console < "u" && console && console.warn("Possible Unhandled Promise Rejection:", n);
-        }, d.a = s;
-      }).call(this, r(5).setImmediate);
-    }, function(a, d, r) {
+        }, d.a = a;
+      }).call(this, o(5).setImmediate);
+    }, function(l, d, o) {
       d.a = function(i) {
         var t = this.constructor;
         return this.then(function(u) {
@@ -477,7 +528,7 @@ var j = { exports: {} };
           });
         });
       };
-    }, function(a, d, r) {
+    }, function(l, d, o) {
       function i(e) {
         return (i = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(n) {
           return typeof n;
@@ -485,37 +536,37 @@ var j = { exports: {} };
           return n && typeof Symbol == "function" && n.constructor === Symbol && n !== Symbol.prototype ? "symbol" : typeof n;
         })(e);
       }
-      r(4);
-      var t, u, g, s, h, p, v, b = r(8), w = (u = function(e) {
-        return new Promise(function(n, c) {
-          e = s(e), (e = h(e)).beforeSend && e.beforeSend();
-          var l = window.XMLHttpRequest ? new window.XMLHttpRequest() : new window.ActiveXObject("Microsoft.XMLHTTP");
-          l.open(e.method, e.url), l.setRequestHeader("X-Requested-With", "XMLHttpRequest"), Object.keys(e.headers).forEach(function(m) {
-            var f = e.headers[m];
-            l.setRequestHeader(m, f);
+      o(4);
+      var t, u, g, a, h, p, v, f = o(8), w = (u = function(e) {
+        return new Promise(function(n, s) {
+          e = a(e), (e = h(e)).beforeSend && e.beforeSend();
+          var c = window.XMLHttpRequest ? new window.XMLHttpRequest() : new window.ActiveXObject("Microsoft.XMLHTTP");
+          c.open(e.method, e.url), c.setRequestHeader("X-Requested-With", "XMLHttpRequest"), Object.keys(e.headers).forEach(function(b) {
+            var m = e.headers[b];
+            c.setRequestHeader(b, m);
           });
           var y = e.ratio;
-          l.upload.addEventListener("progress", function(m) {
-            var f = Math.round(m.loaded / m.total * 100), _ = Math.ceil(f * y / 100);
+          c.upload.addEventListener("progress", function(b) {
+            var m = Math.round(b.loaded / b.total * 100), _ = Math.ceil(m * y / 100);
             e.progress(Math.min(_, 100));
-          }, !1), l.addEventListener("progress", function(m) {
-            var f = Math.round(m.loaded / m.total * 100), _ = Math.ceil(f * (100 - y) / 100) + y;
+          }, !1), c.addEventListener("progress", function(b) {
+            var m = Math.round(b.loaded / b.total * 100), _ = Math.ceil(m * (100 - y) / 100) + y;
             e.progress(Math.min(_, 100));
-          }, !1), l.onreadystatechange = function() {
-            if (l.readyState === 4) {
-              var m = l.response;
+          }, !1), c.onreadystatechange = function() {
+            if (c.readyState === 4) {
+              var b = c.response;
               try {
-                m = JSON.parse(m);
+                b = JSON.parse(b);
               } catch {
               }
-              var f = b.parseHeaders(l.getAllResponseHeaders()), _ = { body: m, code: l.status, headers: f };
-              v(l.status) ? n(_) : c(_);
+              var m = f.parseHeaders(c.getAllResponseHeaders()), _ = { body: b, code: c.status, headers: m };
+              v(c.status) ? n(_) : s(_);
             }
-          }, l.send(e.data);
+          }, c.send(e.data);
         });
       }, g = function(e) {
         return e.method = "POST", u(e);
-      }, s = function() {
+      }, a = function() {
         var e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
         if (e.url && typeof e.url != "string")
           throw new Error("Url must be a string");
@@ -550,21 +601,21 @@ var j = { exports: {} };
           case "PUT":
           case "DELETE":
           case "UPDATE":
-            var c = function() {
+            var s = function() {
               return (arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}).type || t.JSON;
             }(e);
-            (b.isFormData(e.data) || b.isFormElement(e.data)) && (c = t.FORM), e.data = p(e.data, c), c !== w.contentType.FORM && (e.headers["content-type"] = c);
+            (f.isFormData(e.data) || f.isFormElement(e.data)) && (s = t.FORM), e.data = p(e.data, s), s !== w.contentType.FORM && (e.headers["content-type"] = s);
         }
         return e;
       }, p = function() {
         var e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
         switch (arguments.length > 1 ? arguments[1] : void 0) {
           case t.URLENCODED:
-            return b.urlEncode(e);
+            return f.urlEncode(e);
           case t.JSON:
-            return b.jsonEncode(e);
+            return f.jsonEncode(e);
           case t.FORM:
-            return b.formEncode(e);
+            return f.formEncode(e);
           default:
             return e;
         }
@@ -573,100 +624,100 @@ var j = { exports: {} };
       }, { contentType: t = { URLENCODED: "application/x-www-form-urlencoded; charset=utf-8", FORM: "multipart/form-data", JSON: "application/json; charset=utf-8" }, request: u, get: function(e) {
         return e.method = "GET", u(e);
       }, post: g, transport: function(e) {
-        return e = s(e), b.selectFiles(e).then(function(n) {
-          for (var c = new FormData(), l = 0; l < n.length; l++)
-            c.append(e.fieldName, n[l], n[l].name);
-          b.isObject(e.data) && Object.keys(e.data).forEach(function(m) {
-            var f = e.data[m];
-            c.append(m, f);
+        return e = a(e), f.selectFiles(e).then(function(n) {
+          for (var s = new FormData(), c = 0; c < n.length; c++)
+            s.append(e.fieldName, n[c], n[c].name);
+          f.isObject(e.data) && Object.keys(e.data).forEach(function(b) {
+            var m = e.data[b];
+            s.append(b, m);
           });
           var y = e.beforeSend;
           return e.beforeSend = function() {
             return y(n);
-          }, e.data = c, g(e);
+          }, e.data = s, g(e);
         });
       }, selectFiles: function(e) {
-        return delete (e = s(e)).beforeSend, b.selectFiles(e);
+        return delete (e = a(e)).beforeSend, f.selectFiles(e);
       } });
-      a.exports = w;
-    }, function(a, d, r) {
-      r.r(d);
-      var i = r(1);
+      l.exports = w;
+    }, function(l, d, o) {
+      o.r(d);
+      var i = o(1);
       window.Promise = window.Promise || i.a;
-    }, function(a, d, r) {
+    }, function(l, d, o) {
       (function(i) {
         var t = i !== void 0 && i || typeof self < "u" && self || window, u = Function.prototype.apply;
-        function g(s, h) {
-          this._id = s, this._clearFn = h;
+        function g(a, h) {
+          this._id = a, this._clearFn = h;
         }
         d.setTimeout = function() {
           return new g(u.call(setTimeout, t, arguments), clearTimeout);
         }, d.setInterval = function() {
           return new g(u.call(setInterval, t, arguments), clearInterval);
-        }, d.clearTimeout = d.clearInterval = function(s) {
-          s && s.close();
+        }, d.clearTimeout = d.clearInterval = function(a) {
+          a && a.close();
         }, g.prototype.unref = g.prototype.ref = function() {
         }, g.prototype.close = function() {
           this._clearFn.call(t, this._id);
-        }, d.enroll = function(s, h) {
-          clearTimeout(s._idleTimeoutId), s._idleTimeout = h;
-        }, d.unenroll = function(s) {
-          clearTimeout(s._idleTimeoutId), s._idleTimeout = -1;
-        }, d._unrefActive = d.active = function(s) {
-          clearTimeout(s._idleTimeoutId);
-          var h = s._idleTimeout;
-          h >= 0 && (s._idleTimeoutId = setTimeout(function() {
-            s._onTimeout && s._onTimeout();
+        }, d.enroll = function(a, h) {
+          clearTimeout(a._idleTimeoutId), a._idleTimeout = h;
+        }, d.unenroll = function(a) {
+          clearTimeout(a._idleTimeoutId), a._idleTimeout = -1;
+        }, d._unrefActive = d.active = function(a) {
+          clearTimeout(a._idleTimeoutId);
+          var h = a._idleTimeout;
+          h >= 0 && (a._idleTimeoutId = setTimeout(function() {
+            a._onTimeout && a._onTimeout();
           }, h));
-        }, r(6), d.setImmediate = typeof self < "u" && self.setImmediate || i !== void 0 && i.setImmediate || this && this.setImmediate, d.clearImmediate = typeof self < "u" && self.clearImmediate || i !== void 0 && i.clearImmediate || this && this.clearImmediate;
-      }).call(this, r(0));
-    }, function(a, d, r) {
+        }, o(6), d.setImmediate = typeof self < "u" && self.setImmediate || i !== void 0 && i.setImmediate || this && this.setImmediate, d.clearImmediate = typeof self < "u" && self.clearImmediate || i !== void 0 && i.clearImmediate || this && this.clearImmediate;
+      }).call(this, o(0));
+    }, function(l, d, o) {
       (function(i, t) {
         (function(u, g) {
           if (!u.setImmediate) {
-            var s, h, p, v, b, w = 1, e = {}, n = !1, c = u.document, l = Object.getPrototypeOf && Object.getPrototypeOf(u);
-            l = l && l.setTimeout ? l : u, {}.toString.call(u.process) === "[object process]" ? s = function(f) {
+            var a, h, p, v, f, w = 1, e = {}, n = !1, s = u.document, c = Object.getPrototypeOf && Object.getPrototypeOf(u);
+            c = c && c.setTimeout ? c : u, {}.toString.call(u.process) === "[object process]" ? a = function(m) {
               t.nextTick(function() {
-                m(f);
+                b(m);
               });
             } : function() {
               if (u.postMessage && !u.importScripts) {
-                var f = !0, _ = u.onmessage;
+                var m = !0, _ = u.onmessage;
                 return u.onmessage = function() {
-                  f = !1;
-                }, u.postMessage("", "*"), u.onmessage = _, f;
+                  m = !1;
+                }, u.postMessage("", "*"), u.onmessage = _, m;
               }
-            }() ? (v = "setImmediate$" + Math.random() + "$", b = function(f) {
-              f.source === u && typeof f.data == "string" && f.data.indexOf(v) === 0 && m(+f.data.slice(v.length));
-            }, u.addEventListener ? u.addEventListener("message", b, !1) : u.attachEvent("onmessage", b), s = function(f) {
-              u.postMessage(v + f, "*");
-            }) : u.MessageChannel ? ((p = new MessageChannel()).port1.onmessage = function(f) {
-              m(f.data);
-            }, s = function(f) {
-              p.port2.postMessage(f);
-            }) : c && "onreadystatechange" in c.createElement("script") ? (h = c.documentElement, s = function(f) {
-              var _ = c.createElement("script");
+            }() ? (v = "setImmediate$" + Math.random() + "$", f = function(m) {
+              m.source === u && typeof m.data == "string" && m.data.indexOf(v) === 0 && b(+m.data.slice(v.length));
+            }, u.addEventListener ? u.addEventListener("message", f, !1) : u.attachEvent("onmessage", f), a = function(m) {
+              u.postMessage(v + m, "*");
+            }) : u.MessageChannel ? ((p = new MessageChannel()).port1.onmessage = function(m) {
+              b(m.data);
+            }, a = function(m) {
+              p.port2.postMessage(m);
+            }) : s && "onreadystatechange" in s.createElement("script") ? (h = s.documentElement, a = function(m) {
+              var _ = s.createElement("script");
               _.onreadystatechange = function() {
-                m(f), _.onreadystatechange = null, h.removeChild(_), _ = null;
+                b(m), _.onreadystatechange = null, h.removeChild(_), _ = null;
               }, h.appendChild(_);
-            }) : s = function(f) {
-              setTimeout(m, 0, f);
-            }, l.setImmediate = function(f) {
-              typeof f != "function" && (f = new Function("" + f));
+            }) : a = function(m) {
+              setTimeout(b, 0, m);
+            }, c.setImmediate = function(m) {
+              typeof m != "function" && (m = new Function("" + m));
               for (var _ = new Array(arguments.length - 1), E = 0; E < _.length; E++)
                 _[E] = arguments[E + 1];
-              var x = { callback: f, args: _ };
-              return e[w] = x, s(w), w++;
-            }, l.clearImmediate = y;
+              var x = { callback: m, args: _ };
+              return e[w] = x, a(w), w++;
+            }, c.clearImmediate = y;
           }
-          function y(f) {
-            delete e[f];
+          function y(m) {
+            delete e[m];
           }
-          function m(f) {
+          function b(m) {
             if (n)
-              setTimeout(m, 0, f);
+              setTimeout(b, 0, m);
             else {
-              var _ = e[f];
+              var _ = e[m];
               if (_) {
                 n = !0;
                 try {
@@ -690,41 +741,41 @@ var j = { exports: {} };
                     }
                   })(_);
                 } finally {
-                  y(f), n = !1;
+                  y(m), n = !1;
                 }
               }
             }
           }
         })(typeof self > "u" ? i === void 0 ? this : i : self);
-      }).call(this, r(0), r(7));
-    }, function(a, d) {
-      var r, i, t = a.exports = {};
+      }).call(this, o(0), o(7));
+    }, function(l, d) {
+      var o, i, t = l.exports = {};
       function u() {
         throw new Error("setTimeout has not been defined");
       }
       function g() {
         throw new Error("clearTimeout has not been defined");
       }
-      function s(l) {
-        if (r === setTimeout)
-          return setTimeout(l, 0);
-        if ((r === u || !r) && setTimeout)
-          return r = setTimeout, setTimeout(l, 0);
+      function a(c) {
+        if (o === setTimeout)
+          return setTimeout(c, 0);
+        if ((o === u || !o) && setTimeout)
+          return o = setTimeout, setTimeout(c, 0);
         try {
-          return r(l, 0);
+          return o(c, 0);
         } catch {
           try {
-            return r.call(null, l, 0);
+            return o.call(null, c, 0);
           } catch {
-            return r.call(this, l, 0);
+            return o.call(this, c, 0);
           }
         }
       }
       (function() {
         try {
-          r = typeof setTimeout == "function" ? setTimeout : u;
+          o = typeof setTimeout == "function" ? setTimeout : u;
         } catch {
-          r = u;
+          o = u;
         }
         try {
           i = typeof clearTimeout == "function" ? clearTimeout : g;
@@ -732,76 +783,76 @@ var j = { exports: {} };
           i = g;
         }
       })();
-      var h, p = [], v = !1, b = -1;
+      var h, p = [], v = !1, f = -1;
       function w() {
-        v && h && (v = !1, h.length ? p = h.concat(p) : b = -1, p.length && e());
+        v && h && (v = !1, h.length ? p = h.concat(p) : f = -1, p.length && e());
       }
       function e() {
         if (!v) {
-          var l = s(w);
+          var c = a(w);
           v = !0;
           for (var y = p.length; y; ) {
-            for (h = p, p = []; ++b < y; )
-              h && h[b].run();
-            b = -1, y = p.length;
+            for (h = p, p = []; ++f < y; )
+              h && h[f].run();
+            f = -1, y = p.length;
           }
-          h = null, v = !1, function(m) {
+          h = null, v = !1, function(b) {
             if (i === clearTimeout)
-              return clearTimeout(m);
+              return clearTimeout(b);
             if ((i === g || !i) && clearTimeout)
-              return i = clearTimeout, clearTimeout(m);
+              return i = clearTimeout, clearTimeout(b);
             try {
-              i(m);
+              i(b);
             } catch {
               try {
-                return i.call(null, m);
+                return i.call(null, b);
               } catch {
-                return i.call(this, m);
+                return i.call(this, b);
               }
             }
-          }(l);
+          }(c);
         }
       }
-      function n(l, y) {
-        this.fun = l, this.array = y;
+      function n(c, y) {
+        this.fun = c, this.array = y;
       }
-      function c() {
+      function s() {
       }
-      t.nextTick = function(l) {
+      t.nextTick = function(c) {
         var y = new Array(arguments.length - 1);
         if (arguments.length > 1)
-          for (var m = 1; m < arguments.length; m++)
-            y[m - 1] = arguments[m];
-        p.push(new n(l, y)), p.length !== 1 || v || s(e);
+          for (var b = 1; b < arguments.length; b++)
+            y[b - 1] = arguments[b];
+        p.push(new n(c, y)), p.length !== 1 || v || a(e);
       }, n.prototype.run = function() {
         this.fun.apply(null, this.array);
-      }, t.title = "browser", t.browser = !0, t.env = {}, t.argv = [], t.version = "", t.versions = {}, t.on = c, t.addListener = c, t.once = c, t.off = c, t.removeListener = c, t.removeAllListeners = c, t.emit = c, t.prependListener = c, t.prependOnceListener = c, t.listeners = function(l) {
+      }, t.title = "browser", t.browser = !0, t.env = {}, t.argv = [], t.version = "", t.versions = {}, t.on = s, t.addListener = s, t.once = s, t.off = s, t.removeListener = s, t.removeAllListeners = s, t.emit = s, t.prependListener = s, t.prependOnceListener = s, t.listeners = function(c) {
         return [];
-      }, t.binding = function(l) {
+      }, t.binding = function(c) {
         throw new Error("process.binding is not supported");
       }, t.cwd = function() {
         return "/";
-      }, t.chdir = function(l) {
+      }, t.chdir = function(c) {
         throw new Error("process.chdir is not supported");
       }, t.umask = function() {
         return 0;
       };
-    }, function(a, d, r) {
+    }, function(l, d, o) {
       function i(u, g) {
-        for (var s = 0; s < g.length; s++) {
-          var h = g[s];
+        for (var a = 0; a < g.length; a++) {
+          var h = g[a];
           h.enumerable = h.enumerable || !1, h.configurable = !0, "value" in h && (h.writable = !0), Object.defineProperty(u, h.key, h);
         }
       }
-      var t = r(9);
-      a.exports = function() {
+      var t = o(9);
+      l.exports = function() {
         function u() {
           (function(p, v) {
             if (!(p instanceof v))
               throw new TypeError("Cannot call a class as a function");
           })(this, u);
         }
-        var g, s, h;
+        var g, a, h;
         return g = u, h = [{ key: "urlEncode", value: function(p) {
           return t(p);
         } }, { key: "jsonEncode", value: function(p) {
@@ -813,9 +864,9 @@ var j = { exports: {} };
             return new FormData(p);
           if (this.isObject(p)) {
             var v = new FormData();
-            return Object.keys(p).forEach(function(b) {
-              var w = p[b];
-              v.append(b, w);
+            return Object.keys(p).forEach(function(f) {
+              var w = p[f];
+              v.append(f, w);
             }), v;
           }
           throw new Error("`data` must be an instance of Object, FormData or <FORM> HTMLElement");
@@ -827,7 +878,7 @@ var j = { exports: {} };
           return p instanceof HTMLFormElement;
         } }, { key: "selectFiles", value: function() {
           var p = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-          return new Promise(function(v, b) {
+          return new Promise(function(v, f) {
             var w = document.createElement("INPUT");
             w.type = "file", p.multiple && w.setAttribute("multiple", "multiple"), p.accept && w.setAttribute("accept", p.accept), w.style.display = "none", document.body.appendChild(w), w.addEventListener("change", function(e) {
               var n = e.target.files;
@@ -835,68 +886,68 @@ var j = { exports: {} };
             }, !1), w.click();
           });
         } }, { key: "parseHeaders", value: function(p) {
-          var v = p.trim().split(/[\r\n]+/), b = {};
+          var v = p.trim().split(/[\r\n]+/), f = {};
           return v.forEach(function(w) {
-            var e = w.split(": "), n = e.shift(), c = e.join(": ");
-            n && (b[n] = c);
-          }), b;
-        } }], (s = null) && i(g.prototype, s), h && i(g, h), u;
+            var e = w.split(": "), n = e.shift(), s = e.join(": ");
+            n && (f[n] = s);
+          }), f;
+        } }], (a = null) && i(g.prototype, a), h && i(g, h), u;
       }();
-    }, function(a, d) {
-      var r = function(t) {
+    }, function(l, d) {
+      var o = function(t) {
         return encodeURIComponent(t).replace(/[!'()*]/g, escape).replace(/%20/g, "+");
-      }, i = function(t, u, g, s) {
-        return u = u || null, g = g || "&", s = s || null, t ? function(h) {
+      }, i = function(t, u, g, a) {
+        return u = u || null, g = g || "&", a = a || null, t ? function(h) {
           for (var p = new Array(), v = 0; v < h.length; v++)
             h[v] && p.push(h[v]);
           return p;
         }(Object.keys(t).map(function(h) {
-          var p, v, b = h;
-          if (s && (b = s + "[" + b + "]"), typeof t[h] == "object" && t[h] !== null)
-            p = i(t[h], null, g, b);
+          var p, v, f = h;
+          if (a && (f = a + "[" + f + "]"), typeof t[h] == "object" && t[h] !== null)
+            p = i(t[h], null, g, f);
           else {
-            u && (v = b, b = !isNaN(parseFloat(v)) && isFinite(v) ? u + Number(b) : b);
+            u && (v = f, f = !isNaN(parseFloat(v)) && isFinite(v) ? u + Number(f) : f);
             var w = t[h];
-            w = (w = (w = (w = w === !0 ? "1" : w) === !1 ? "0" : w) === 0 ? "0" : w) || "", p = r(b) + "=" + r(w);
+            w = (w = (w = (w = w === !0 ? "1" : w) === !1 ? "0" : w) === 0 ? "0" : w) || "", p = o(f) + "=" + o(w);
           }
           return p;
         })).join(g).replace(/[!'()*]/g, "") : "";
       };
-      a.exports = i;
+      l.exports = i;
     }]);
   });
 })(j);
-var q = j.exports;
-const M = /* @__PURE__ */ R(q);
-class H {
+var H = j.exports;
+const M = /* @__PURE__ */ R(H);
+class B {
   /**
    * @param {object} params - uploader module params
    * @param {ImageConfig} params.config - image tool config
    */
-  constructor({ config: o }) {
-    this.config = o;
+  constructor({ config: r }) {
+    this.config = r;
   }
   /**
    * Handle clicks on the upload file button
    */
-  uploadSelectedFiles(o, { onPreview: a, onUpload: d, onError: r }) {
+  uploadSelectedFiles(r, { onPreview: l, onUpload: d, onError: o }) {
     M.selectFiles({
       accept: this.config.types,
       multiple: !0
     }).then((i) => {
       let t = 0;
-      for (var u = 0; u < i.length && !(o !== null && t == o); u++) {
+      for (var u = 0; u < i.length && !(r !== null && t == r); u++) {
         t++;
-        let g = i[u], s = a(g), h;
+        let g = i[u], a = l(g), h;
         if (this.config.uploader && typeof this.config.uploader.uploadByFile == "function") {
           const p = this.config.uploader.uploadByFile(g);
-          B(p) || console.warn("Custom uploader method uploadByFile should return a Promise"), h = p;
+          A(p) || console.warn("Custom uploader method uploadByFile should return a Promise"), h = p;
         } else
           h = this.uploadByFile(g);
         h.then((p) => {
-          d(p, s);
+          d(p, a);
         }).catch((p) => {
-          r(p, s);
+          o(p, a);
         });
       }
     });
@@ -907,19 +958,19 @@ class H {
    *
    * @param {File} file - file pasted by drag-n-drop
    */
-  uploadByFile(o) {
-    const a = new FormData();
-    return a.append(this.config.field, o), this.config.additionalRequestData && Object.keys(this.config.additionalRequestData).length && Object.entries(this.config.additionalRequestData).forEach(([d, r]) => {
-      a.append(d, r);
+  uploadByFile(r) {
+    const l = new FormData();
+    return l.append(this.config.field, r), this.config.additionalRequestData && Object.keys(this.config.additionalRequestData).length && Object.entries(this.config.additionalRequestData).forEach(([d, o]) => {
+      l.append(d, o);
     }), M.post({
       url: this.config.endpoints.byFile,
-      data: a,
+      data: l,
       type: M.contentType.JSON,
       headers: this.config.additionalRequestHeaders
     }).then((d) => d.body);
   }
 }
-function B(S) {
+function A(S) {
   return S && typeof S.then == "function";
 }
 /**
@@ -952,7 +1003,7 @@ function B(S) {
  *   },
  * },
  */
-class A {
+class U {
   /**
    * Notify core that read-only mode is supported
    *
@@ -970,7 +1021,7 @@ class A {
    */
   static get toolbox() {
     return {
-      icon: L,
+      icon: O,
       title: "Media"
     };
   }
@@ -981,19 +1032,19 @@ class A {
    * @param {object} tool.api - Editor.js API
    * @param {boolean} tool.readOnly - read-only mode flag
    */
-  constructor({ data: o, config: a, api: d, readOnly: r }) {
-    this.api = d, this.readOnly = r, this.config = {
-      endpoints: a.endpoints || "",
-      additionalRequestData: a.additionalRequestData || {},
-      additionalRequestHeaders: a.additionalRequestHeaders || {},
-      field: a.field || "image",
-      types: a.types || "image/*",
-      buttonContent: a.buttonContent || "",
-      uploader: a.uploader || void 0,
-      actions: a.actions || void 0,
-      maxElementCount: a.maxElementCount || void 0,
-      sortableJs: a.sortableJs
-    }, this.uploader = new H({
+  constructor({ data: r, config: l, api: d, readOnly: o }) {
+    this.api = d, this.readOnly = o, this.config = {
+      endpoints: l.endpoints || "",
+      additionalRequestData: l.additionalRequestData || {},
+      additionalRequestHeaders: l.additionalRequestHeaders || {},
+      field: l.field || "image",
+      types: l.types || "image/*",
+      buttonContent: l.buttonContent || "",
+      uploader: l.uploader || void 0,
+      actions: l.actions || void 0,
+      maxElementCount: l.maxElementCount || void 0,
+      sortableJs: l.sortableJs
+    }, this.uploader = new B({
       config: this.config
     }), this.ui = new k({
       api: d,
@@ -1016,12 +1067,15 @@ class A {
       onMoveFile: (i, t) => {
         this.moveImage(i, t);
       },
-      readOnly: r
-    }), this.tunes = new O({
+      onUpdateFile: (i, t) => {
+        this.updateImage(i, t);
+      },
+      readOnly: o
+    }), this.tunes = new L({
       api: d,
       actions: this.config.actions,
       onChange: (i) => this.styleToggled(i)
-    }), this._data = {}, this.data = o;
+    }), this._data = {}, this.data = r;
   }
   /**
    * Renders Block content
@@ -1043,8 +1097,8 @@ class A {
    * @returns {boolean} false if saved data is not correct, otherwise true
    * @public
    */
-  validate(o) {
-    return !(!o.files || !o.files.length);
+  validate(r) {
+    return !(!r.files || !r.files.length);
   }
   /**
    * Return Block data
@@ -1054,8 +1108,8 @@ class A {
    * @returns {ImageGalleryData}
    */
   save() {
-    const o = this.ui.nodes.caption;
-    return this._data.caption = o.innerHTML, this.data;
+    const r = this.ui.nodes.caption;
+    return this._data.caption = r.innerHTML, this.data;
   }
   /**
    * Makes buttons with tunes
@@ -1074,11 +1128,11 @@ class A {
    *
    * @param {ImageGalleryDataFile} file - uploaded file data
    */
-  appendImage(o) {
-    if (o && o.url) {
+  appendImage(r) {
+    if (r && r.url) {
       if (this.config.maxElementCount && this._data.files.length >= this.config.maxElementCount)
         return;
-      this._data.files.push(o), this.ui.appendImage(o), this.checkMaxElemCount();
+      this._data.files.push(r), this.ui.appendImage(r), this.checkMaxElemCount();
     }
   }
   /**
@@ -1089,8 +1143,8 @@ class A {
    * @param {integer} from - target image old index
    * @param {integer} to - target image new index
    */
-  moveImage(o, a) {
-    a >= this._data.files.length && (a = this._data.files.length - 1), this._data.files.splice(a, 0, this._data.files.splice(o, 1)[0]);
+  moveImage(r, l) {
+    l >= this._data.files.length && (l = this._data.files.length - 1), this._data.files.splice(l, 0, this._data.files.splice(r, 1)[0]);
   }
   /**
    * Delete image file
@@ -1099,8 +1153,8 @@ class A {
    *
    * @param {integer} id - image index
    */
-  deleteImage(o) {
-    this._data.files[o] !== void 0 && (this._data.files.splice(o, 1), this.checkMaxElemCount());
+  deleteImage(r) {
+    this._data.files[r] !== void 0 && (this._data.files.splice(r, 1), this.checkMaxElemCount());
   }
   /**
    * Private methods
@@ -1113,12 +1167,12 @@ class A {
    *
    * @param {ImageGalleryData} data - data in Image Tool format
    */
-  set data(o) {
-    this._data.files = [], o.files && o.files.forEach((d) => {
+  set data(r) {
+    this._data.files = [], r.files && r.files.forEach((d) => {
       this.appendImage(d);
-    }), this._data.caption = o.caption || "", this.ui.fillCaption(this._data.caption);
-    let a = o.style || "gallery";
-    this.styleToggled(a);
+    }), this._data.caption = r.caption || "", this.ui.fillCaption(this._data.caption);
+    let l = r.style || "gallery";
+    this.styleToggled(l);
   }
   /**
    * Return Tool data
@@ -1138,8 +1192,8 @@ class A {
    * @param {UploadResponseFormat} response - uploading server response
    * @returns {void}
    */
-  onUpload(o, a) {
-    this.ui.removePreloader(a), o.success && o.file ? this.appendImage(o.file) : this.uploadingFailed("incorrect response: " + JSON.stringify(o));
+  onUpload(r, l) {
+    this.ui.removePreloader(l), r.success && r.file ? this.appendImage(r.file) : this.uploadingFailed("incorrect response: " + JSON.stringify(r));
   }
   /**
    * Handle uploader errors
@@ -1148,8 +1202,8 @@ class A {
    * @param {string} errorText - uploading error text
    * @returns {void}
    */
-  uploadingFailed(o, a) {
-    this.ui.removePreloader(a), console.log("Image Tool: uploading failed because of", o), this.api.notifier.show({
+  uploadingFailed(r, l) {
+    this.ui.removePreloader(l), console.log("Image Tool: uploading failed because of", r), this.api.notifier.show({
       message: this.api.i18n.t("Couldn’t upload image. Please try another."),
       style: "error"
     });
@@ -1162,13 +1216,13 @@ class A {
    * @param {string} tuneName - tune that has been clicked
    * @returns {void}
    */
-  styleToggled(o) {
-    this._data.style = o, this.ui.applyTune(o);
+  styleToggled(r) {
+    this._data.style = r, this.ui.applyTune(r);
   }
   checkMaxElemCount() {
     this.ui.updateLimitCounter(this._data.files.length, this.config.maxElementCount), this.config.maxElementCount && this._data.files.length >= this.config.maxElementCount ? this.ui.hideFileButton() : this.ui.showFileButton();
   }
 }
 export {
-  A as default
+  U as default
 };

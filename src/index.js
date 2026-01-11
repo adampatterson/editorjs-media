@@ -157,6 +157,9 @@ export default class ImageGallery {
       onMoveFile: (oldId, newId) => {
         this.moveImage(oldId, newId);
       },
+      onUpdateFile: (id, newData) => {
+        this.updateImage(id, newData);
+      },
       readOnly,
     });
 

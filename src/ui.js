@@ -1,4 +1,5 @@
 import { IconPicture, IconTrash } from '@codexteam/icons';
+import editIcon from './svg/edit.svg?raw';
 
 /**
  * Class for working with UI:
@@ -14,12 +15,13 @@ export default class Ui {
    * @param {Function} ui.onSelectFile - callback for clicks on Select file button
    * @param {boolean} ui.readOnly - read-only mode flag
    */
-  constructor({ api, config, onSelectFile, onDeleteFile, onMoveFile, readOnly }) {
+  constructor({ api, config, onSelectFile, onDeleteFile, onMoveFile, onUpdateFile, readOnly }) {
     this.api = api;
     this.config = config;
     this.onSelectFile = onSelectFile;
     this.onDeleteFile = onDeleteFile;
     this.onMoveFile = onMoveFile;
+    this.onUpdateFile = onUpdateFile;
     this.readOnly = readOnly;
     this.nodes = {
       wrapper: make('div', [this.CSS.baseClass, this.CSS.wrapper]),
@@ -108,8 +110,15 @@ export default class Ui {
       imagePreloader: 'image-gallery__preloader',
       imageEl: 'image-gallery__image-picture',
       trashButton: 'image-gallery__image-trash',
+      editButton: 'image-gallery__image-edit',
       caption: 'image-gallery__caption',
       heading: 'image-gallery__heading',
+      modal: 'image-gallery__modal',
+      modalContent: 'image-gallery__modal-content',
+      modalTitle: 'image-gallery__modal-title',
+      modalField: 'image-gallery__modal-field',
+      modalFooter: 'image-gallery__modal-footer',
+      buttonPrimary: 'cdx-button--primary',
     };
   };
 
@@ -314,6 +323,27 @@ export default class Ui {
       });
 
       imageContainer.appendChild(imageTrash);
+
+      const editTitle = this.api.i18n.t('Edit');
+      let imageEdit = make('div', [this.CSS.editButton], {
+        innerHTML: editIcon,
+        title: editTitle,
+      });
+
+      this.api.tooltip.onHover(imageEdit, editTitle, {
+        placement: 'top',
+      });
+
+      imageEdit.addEventListener('click', () => {
+        let arrayChild = Array.prototype.slice.call(this.nodes.itemsContainer.children);
+        let elIndex = arrayChild.indexOf(imageContainer);
+
+        if (elIndex !== -1) {
+          this.showEditModal(file, elIndex);
+        }
+      });
+
+      imageContainer.appendChild(imageEdit);
     }
 
     this.nodes.itemsContainer.append(imageContainer);
@@ -377,6 +407,78 @@ export default class Ui {
 
     const headingText = tuneName === 'gallery' ? 'Gallery' : 'Slider';
     this.nodes.heading.innerText = this.api.i18n.t(headingText);
+  }
+
+  /**
+   * Shows edit modal
+   *
+   * @param {ImageGalleryDataFile} file - file data
+   * @param {number} index - file index
+   */
+  showEditModal(file, index) {
+    const modal = make('div', this.CSS.modal);
+    const content = make('div', this.CSS.modalContent);
+    const title = make('div', this.CSS.modalTitle, {
+      innerText: this.api.i18n.t('Edit Image Metadata'),
+    });
+
+    const createField = (label, key, type = 'input') => {
+      const field = make('div', this.CSS.modalField);
+      const labelEl = make('label', null, { innerText: this.api.i18n.t(label) });
+      const input = make(type === 'textarea' ? 'textarea' : 'input', null, {
+        value: file[key] || '',
+        placeholder: this.api.i18n.t(label),
+      });
+
+      field.appendChild(labelEl);
+      field.appendChild(input);
+
+      return { field, input };
+    };
+
+    const titleField = createField('Title', 'title');
+    const altField = createField('Alt Text', 'alt');
+    const descField = createField('Description', 'description', 'textarea');
+    const authorField = createField('Author', 'author');
+
+    const footer = make('div', this.CSS.modalFooter);
+    const saveBtn = make('button', [this.CSS.button, this.CSS.buttonPrimary], {
+      innerText: this.api.i18n.t('Save'),
+    });
+    const cancelBtn = make('button', [this.CSS.button], {
+      innerText: this.api.i18n.t('Cancel'),
+    });
+
+    saveBtn.addEventListener('click', () => {
+      const newData = {
+        title: titleField.input.value,
+        alt: altField.input.value,
+        description: descField.input.value,
+        author: authorField.input.value,
+      };
+
+      this.onUpdateFile(index, newData);
+      // Update local file object reference for immediate re-open
+      Object.assign(file, newData);
+      modal.remove();
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      modal.remove();
+    });
+
+    footer.appendChild(cancelBtn);
+    footer.appendChild(saveBtn);
+
+    content.appendChild(title);
+    content.appendChild(titleField.field);
+    content.appendChild(altField.field);
+    content.appendChild(descField.field);
+    content.appendChild(authorField.field);
+    content.appendChild(footer);
+
+    modal.appendChild(content);
+    document.body.appendChild(modal);
   }
 }
 

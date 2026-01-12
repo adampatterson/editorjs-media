@@ -33,9 +33,22 @@
     scroll-snap-type: x mandatory;
   }
 
+  &--slider &__items--drag {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    overflow-x: initial;
+    scroll-snap-type: initial;
+  }
+
   &--slider &__image {
     flex: 0 0 100%;
     scroll-snap-align: center;
+  }
+
+  &--slider &__items--drag &__image {
+    flex: initial;
+    scroll-snap-align: initial;
   }
 
   &--gallery &__items {
